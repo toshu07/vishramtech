@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vishram Technologies</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      width: 100%;
+    }
+  
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      transition: background-color 0.3s;
+      background: linear-gradient(to right, #9da1c7, #1a169d);
+    }
+
+    header.scrolled {
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    header img {
+      height: 60px;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
+      transition: color 0.3s;
+    }
+
+    header.scrolled nav a {
+      color: #333;
+    }
+
+    section {
+      padding: 6rem 0 3rem 0;
+    }
+
+    #home {
+      background: linear-gradient(to right, #9da1c7, #1a169d);
+      color: white;
+      text-align: center;
+      padding: 10rem 0 6rem;
+    }
+
+
+    .hero-section h2 {
+      color: #c7ed3c;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+    }
+
+    ul.services li {
+      margin-bottom: 0.5rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    input, textarea {
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #ee0979;
+      color: #fff;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .hero-section {
+      height: 600px;
+    }
+    .margin-section {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .hero-section h1 {
+      font-size: 3rem; /* or try 3.5rem / 4rem */
+      font-weight: 700;
+    }
+    
+    .hero-section h2 {
+      font-size: 4rem; /* adjust as needed */
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+  </style>
+</head>
+
+<body>
+  <header id="main-header">
+    <img src="C://Users/pc/Downloads/CompanyLogoTransparent.png" alt="Vishram Technologies Logo">
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#customers">Customers & Partners</a>
+      <a href="#offerings">Solutions</a>
+      <a href="#services">Services</a>
+      <a href="#careers">Careers</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero-section">
+    <h1>DRIVING YOUR SUCCESS THROUGH</h1>
+    <h2>SMARTER SALESFORCE<br>SOLUTIONS<br>AND DIGITAL STRATEGIES</h2>
+  </section>
+
+  <section id="about" class="margin-section">
+    <h2>About Us</h2>
+    <p>Vishram Technologies is a Salesforce-focused consultancy offering expert implementation, integration, and advisory services. With deep technical expertise and a team of certified professionals, we help businesses succeed through smart technology solutions.</p>
+  </section>
+
+  <section id="customers" class="margin-section">
+    <h2>Customers & Partners</h2>
+    <p>We collaborate with organizations across industries to deliver transformative CRM and integration solutions.</p>
+  </section>
+
+  <section id="offerings" class="margin-section">
+    <h2>Our Solutions</h2>
+    <p>Specializing in end-to-end CRM, Integration, and Commerce solutions powered by Salesforce and Mulesoft.</p>
+  </section>
+
+  <section id="services" class="margin-section">
+    <h2>Our Services</h2>
+    <ul class="services">
+      <li>Salesforce Implementation and Customization</li>
+      <li>Salesforce Advisory Services</li>
+      <li>Sales Cloud, Service Cloud, and Experience Cloud Implementations</li>
+      <li>B2B Commerce & B2C Commerce Implementations</li>
+      <li>Mulesoft Development & Architecture Services</li>
+      <li>Salesforce Mentoring & Workforce Development</li>
+    </ul>
+  </section>
+
+  <section id="careers" class="margin-section">
+    <h2>Careers</h2>
+    <p>Join our expert team and work on cutting-edge Salesforce and Mulesoft projects with global impact.</p>
+  </section>
+
+  <section id="contact" class="margin-section">
+    <h2>Contact Us</h2>
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+      <input type="hidden" name="oid" value="YOUR_SF_ORG_ID_HERE"> <!-- Replace with your Salesforce Org ID -->
+      <input type="text" name="first_name" placeholder="First Name" required />
+      <input type="text" name="last_name" placeholder="Last Name" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="text" name="company" placeholder="Company Name" required />
+      <textarea name="description" placeholder="Your message" rows="4"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+    <p>For direct contact: tavishsharma0007@gmail.com</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Vishram Technologies. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 80) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+
+</html>
